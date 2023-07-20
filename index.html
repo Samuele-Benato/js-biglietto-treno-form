@@ -37,5 +37,34 @@
     <!-- MY JS -->
     <script type="text/javascript" src="./JS/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="card w-50 my-4">
+        <img src="./img/treno.jpg" class="card-img-top" alt="..." />
+        <h5 class="card-title">CALCOLA IL PREZZO DEL TUO BIGLIETTO!</h5>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="d-inline-block">Inserire età passeggero</div>
+              <input
+                type="number"
+                id="passenger_age"
+                name="passenger_age"
+                min="1"
+                max="110"
+              />
+            </li>
+            <li class="list-group-item">
+              <div class="d-inline-block">Inserire km da percorrere</div>
+              <input type="number" id="passenger_km" name="passenger_age" />
+            </li>
+            <li class="list-group-item">
+              <button id="send" class="btn btn-danger">Send</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="ticket_price">ddd</div>
+    </div>
+  </body>
 </html>
