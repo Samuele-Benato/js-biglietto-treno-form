@@ -40,5 +40,5 @@ sendButton.addEventListener("click", function () {
   const tiketFinalPrice = tiketBasePrice - tiketDiscount;
 
   const messageFinalPrice = (document.getElementById("ticket_price").innerHTML =
-    tiketFinalPrice.toFixed(2) + " €");
+    "Spenderai per il tuo viaggio : " + tiketFinalPrice.toFixed(2) + " €");
 });
