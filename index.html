@@ -18,6 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Inter&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -40,39 +47,75 @@
   <body>
     <div class="container">
       <div class="card w-50 my-4 mx-auto">
-        <img src="./img/GOLDEN.jpg" class="card-img-top" alt="..." />
-        <h5 class="card-title text-center pt-3 fs-3">
-          CALCOLA IL PREZZO DEL TUO BIGLIETTO!
-        </h5>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item fs-4">
-              <div class="d-inline-block">Inserire età passeggero</div>
-              <input
-                type="number"
-                id="passenger_age"
-                name="passenger_age"
-                min="1"
-                max="110"
-              />
-            </li>
-            <li class="list-group-item fs-4">
-              <div class="d-inline-block">Inserire km da percorrere</div>
-              <input
-                type="number"
-                id="passenger_km"
-                name="passenger_age"
-                min="1"
-                max="9999"
-              />
-            </li>
-            <li class="list-group-item">
-              <button id="send" class="btn btn-danger fs-5">Send</button>
-            </li>
-          </ul>
+        <div>
+          <img src="./img/treno.jpg" class="card-img-top" alt="treno" />
+        </div>
+
+        <div class="card-title m-0 card_title_bg">
+          <h5 class="p-3 fs-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO!</h5>
+          <p>
+            Per gli under 18 è riservato uno sconto extra del 20%! <br />
+            Per gli over 65 è riservato uno sconto extra del 40%!
+          </p>
+        </div>
+        <div class="card-body card_body_bg">
+          <!-- NOME PASSEGGERO -->
+          <div class="fs-4 pb-3 card_line text-center">
+            <div class="d-inline-block">Nome passeggero :</div>
+            <input
+              type="text"
+              id="passenger_name"
+              name="passenger_name"
+              class="card_input_bg"
+            />
+          </div>
+          <!-- KM DA PERCORRERE -->
+
+          <div class="fs-4 py-3 card_line">
+            <div class="d-inline-block">Km da percorrere :</div>
+            <input
+              type="number"
+              id="passenger_km"
+              name="passenger_km"
+              min="1"
+              max="9999"
+              class="card_input_bg"
+            />
+          </div>
+          <!-- ETA PASSEGGERO -->
+          <div class="fs-4 py-3 card_line">
+            <div class="d-inline-block">Età passeggero :</div>
+            <input
+              type="number"
+              id="passenger_age"
+              name="passenger_age"
+              min="1"
+              max="110"
+              class="card_input_bg"
+            />
+          </div>
+
+          <!-- BOTTONE -->
+          <div class="py-3">
+            <button id="send" class="btn card_button_bg fs-6">Send</button>
+          </div>
         </div>
       </div>
-      <div id="ticket_price" class="w-50 fs-3 fw-bold mx-auto my-3"></div>
+      <!-- CARTA DOPO IL CLICK -->
+      <div>
+        <div class="card w-50 my-4 mx-auto" style="width: 18rem">
+          <img src="./img/treno.jpg" class="card-img-top" alt="treno" />
+          <!-- CARD TITLE -->
+          <h5
+            id="card_title_tiket "
+            class="card-title m-0 card_title_bg p-3 fs-4"
+          ></h5>
+          <!-- CARD BODY -->
+          <div class="card-body card_body_bg">
+            <p id="ticket_price" class="card-text fs-4 py-3"></p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,40 @@
+/* GOOGLE FONT */
+body {
+  font-family: "Alkatra", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Slab", serif;
+
+  background: #3d271e;
+}
+
+.card_line {
+  border-bottom: 2px solid #8c3c0f;
+  color: #3d271e;
+}
+
+.card_body_bg {
+  background: #dba864;
+  font-weight: 700;
+}
+
+.card_title_bg {
+  background: #8c3c0f;
+}
+
+.card_title_bg,
+.card_input_bg {
+  color: white;
+  text-align: center;
+}
+
+.card_button_bg,
+.card_input_bg {
+  background: #3d271e;
+  color: white;
+}
+
+.card_input_bg {
+  border-radius: 15px;
+}
