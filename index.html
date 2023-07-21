@@ -46,11 +46,12 @@
   </head>
   <body>
     <div class="container">
+      <!-- CARTA DA COMPILARE INIZIALE -->
       <div class="card w-50 my-4 mx-auto">
         <div>
           <img src="./img/treno.jpg" class="card-img-top" alt="treno" />
         </div>
-
+        <!-- TITOLO CARTA INIZIALE -->
         <div class="card-title m-0 card_title_bg">
           <h5 class="p-3 fs-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO!</h5>
           <p>
@@ -58,6 +59,7 @@
             Per gli over 65 è riservato uno sconto extra del 40%!
           </p>
         </div>
+        <!-- CORPO CARTA INIZIALE -->
         <div class="card-body card_body_bg">
           <!-- NOME PASSEGGERO -->
           <div class="fs-4 pb-3 card_line text-center">
@@ -101,19 +103,24 @@
           </div>
         </div>
       </div>
+
       <!-- CARTA DOPO IL CLICK -->
       <div>
-        <div class="card w-50 my-4 mx-auto" style="width: 18rem">
+        <div id="card_after_click" class="card w-50 my-4 mx-auto d-none">
           <img src="./img/treno.jpg" class="card-img-top" alt="treno" />
           <!-- CARD TITLE -->
           <h5
             id="card_title_tiket "
             class="card-title m-0 card_title_bg p-3 fs-4"
-          ></h5>
+          >
+            TUTTI IN CARROZZA!
+          </h5>
           <!-- CARD BODY -->
           <div class="card-body card_body_bg">
-            <p id="ticket_price" class="card-text fs-4 py-3"></p>
-            <p id="tiket_discount"></p>
+            <div class="text-center">
+              <p id="ticket_price" class="card_line fs-4 py-3"></p>
+              <p id="tiket_discount" class="fs-6 pt-3"></p>
+            </div>
           </div>
         </div>
       </div>

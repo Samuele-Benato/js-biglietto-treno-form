@@ -46,7 +46,7 @@ sendButton.addEventListener("click", function () {
   // const cardTitleMessage = (document.getElementById(
   //   "card_title_tiket"
   // ).innerHTML = `Buon Viaggio ${userName} !
-  //   `);
+  // `);
 
   // card body message price
   const cardBodyMessage = (document.getElementById(
@@ -65,4 +65,8 @@ sendButton.addEventListener("click", function () {
     )}
   €</p>`);
   }
+
+  // mostro carta biglietto
+  const cardAfterClick = document.getElementById("card_after_click");
+  cardAfterClick.classList.remove("d-none");
 });
