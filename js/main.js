@@ -1,6 +1,9 @@
 const sendButton = document.getElementById("send");
 
 sendButton.addEventListener("click", function () {
+  // chiedo il nome all'utente
+  let userName = document.getElementById("passenger_name").value;
+
   // chiedo all'utente i km da percorrere
   let userKm = parseFloat(document.getElementById("passenger_km").value);
   // FINCHE il numero è uguale o inferiore a 0 OPPURE non è un numero riproponi in loop
@@ -39,6 +42,27 @@ sendButton.addEventListener("click", function () {
   // calcolo il prezzo finale del biglietto
   const tiketFinalPrice = tiketBasePrice - tiketDiscount;
 
-  const messageFinalPrice = (document.getElementById("ticket_price").innerHTML =
-    "Spenderai per il tuo viaggio : " + tiketFinalPrice.toFixed(2) + " €");
+  // // card title message
+  // const cardTitleMessage = (document.getElementById(
+  //   "card_title_tiket"
+  // ).innerHTML = `Buon Viaggio ${userName} !
+  //   `);
+
+  // card body message price
+  const cardBodyMessage = (document.getElementById(
+    "ticket_price"
+  ).innerHTML = `<p>Questo è il preventivo del tuo biglietto : ${tiketFinalPrice.toFixed(
+    2
+  )}
+  €</p>`);
+
+  if (userAge < 18 || userAge > 65) {
+    // card body message discount
+    const cardDiscountMessage = (document.getElementById(
+      "tiket_discount"
+    ).innerHTML = `<p>Al tuo biglietto è stato applicato uno sconto di : ${tiketDiscount.toFixed(
+      2
+    )}
+  €</p>`);
+  }
 });
